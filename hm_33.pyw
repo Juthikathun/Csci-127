@@ -1,0 +1,17 @@
+#Juthi Kathun
+#Email juthi.kathun27@login.cuny.edu
+
+
+#Count which cars got the most parking tickets
+
+#Import pandas for reading and analyzing CSV data:
+import pandas as pd
+
+csvFile = input('Enter CSV file name: ')
+#Name of the CSV file
+attribute=input("Enter attribute")
+
+tickets = pd.read_csv(csvFile)                  #Read in the file to a dataframe
+print("The top 5 values:")
+
+print(tickets[attribute].value_counts()[:5])
